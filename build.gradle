@@ -12,6 +12,7 @@ sourceCompatibility = '1.8'
 mainClassName = 'io.vertx.core.Launcher'
 
 def vertxVersion = '3.5.1'
+def slf4jVersion = '1.7.21'
 def mainVerticleName = 'io.vertx.starter.MainVerticle'
 def watchForChange = 'src/**/*'
 def doOnChange = './gradlew classes'
@@ -19,6 +20,8 @@ def doOnChange = './gradlew classes'
 dependencies {
   compile "io.vertx:vertx-core:$vertxVersion"
   compile "io.vertx:vertx-web:$vertxVersion"
+  compile "io.vertx:vertx-web-templ-thymeleaf:$vertxVersion"
+  compile "org.slf4j:slf4j-jdk14:$slf4jVersion"
   testCompile "junit:junit:4.12"
   testCompile "io.vertx:vertx-unit:$vertxVersion"
 }
